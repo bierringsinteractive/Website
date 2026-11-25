@@ -109,14 +109,14 @@
   .game-info h3 { font-size: 26px; margin-bottom: 12px; }
   .game-info p { color: var(--muted); }
 
-  .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; margin-top: 44px; }
+  .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 44px; }
   .mail {
     display: block; text-decoration: none; background: var(--panel); border: 1px solid var(--line);
     border-radius: 12px; padding: 22px 24px; transition: border-color .15s, transform .15s;
   }
   .mail:hover { border-color: var(--accent); transform: translateY(-2px); }
   .mail small { display: block; color: var(--muted); font-size: 13px; margin-bottom: 4px; }
-  .mail strong { font-weight: 600; font-size: 15px; word-break: break-all; }
+  .mail strong { font-weight: 600; font-size: 16px; white-space: nowrap; }
 
   footer { border-top: 1px solid var(--line); padding: 36px 0; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -125,6 +125,8 @@
     nav { display: none; }
     .grid3 { grid-template-columns: 1fr; }
     .game { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .mail strong { white-space: normal; overflow-wrap: anywhere; font-size: 15px; }
     .hero { padding: 100px 0 80px; }
   }
 </style>
